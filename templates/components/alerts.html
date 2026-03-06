@@ -1,0 +1,7 @@
+{% if messages %}
+{% for message in messages %}
+<div class="card-panel {{ message.tags|default:'teal' }} white-text" style="margin-bottom:10px;">
+    <span><i class="material-icons tiny">info</i> {{ message }}</span>
+</div>
+{% endfor %}
+{% endif %}
