@@ -1,0 +1,19 @@
+<div class="sidebar blue darken-4" style="min-width:200px; min-height:calc(100vh - 64px);">
+    <ul class="sidenav-fixed white-text" style="padding:10px 0;">
+        <li><a href="{% url 'reporting:dashboard' %}" class="white-text"><i class="material-icons">dashboard</i> Dashboard</a></li>
+        <li class="divider"></li>
+        <li><a href="{% url 'pos:terminal' %}" class="white-text"><i class="material-icons">point_of_sale</i> POS Terminal</a></li>
+        <li><a href="{% url 'restaurant:floor_plan' %}" class="white-text"><i class="material-icons">restaurant</i> Restaurant</a></li>
+        <li><a href="{% url 'tailoring:list' %}" class="white-text"><i class="material-icons">content_cut</i> Tailoring</a></li>
+        <li class="divider"></li>
+        <li><a href="{% url 'products:list' %}" class="white-text"><i class="material-icons">inventory</i> Products</a></li>
+        <li><a href="{% url 'warehouse:stock_dashboard' %}" class="white-text"><i class="material-icons">warehouse</i> Stock</a></li>
+        <li><a href="{% url 'procurement:po_list' %}" class="white-text"><i class="material-icons">local_shipping</i> Procurement</a></li>
+        <li class="divider"></li>
+        <li><a href="{% url 'customers:list' %}" class="white-text"><i class="material-icons">people</i> Customers</a></li>
+        <li><a href="{% url 'suppliers:list' %}" class="white-text"><i class="material-icons">business</i> Suppliers</a></li>
+        <li class="divider"></li>
+        <li><a href="{% url 'accounting:journal_list' %}" class="white-text"><i class="material-icons">account_balance</i> Accounting</a></li>
+        <li><a href="{% url 'irc_tax:dashboard' %}" class="white-text"><i class="material-icons">receipt_long</i> IRC Tax</a></li>
+    </ul>
+</div>

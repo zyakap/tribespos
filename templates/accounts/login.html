@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Login — Harhurum POS{% endblock %}
+{% block content %}
+<div class="row" style="margin-top:50px;">
+    <div class="col s12 m6 offset-m3">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title center-align">
+                    <i class="material-icons blue-text">store</i><br>
+                    Harhurum POS
+                </span>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-field">
+                        <i class="material-icons prefix">person</i>
+                        {{ form.username }}
+                        <label for="{{ form.username.id_for_label }}">Username</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">lock</i>
+                        {{ form.password }}
+                        <label for="{{ form.password.id_for_label }}">Password</label>
+                    </div>
+                    {% if form.errors %}
+                    <p class="red-text">Invalid username or password.</p>
+                    {% endif %}
+                    <button type="submit" class="btn blue darken-3 btn-large waves-effect waves-light" style="width:100%;">
+                        <i class="material-icons left">login</i> Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

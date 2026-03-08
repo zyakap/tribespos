@@ -1,0 +1,63 @@
+:root {
+    --primary: #1565C0;
+    --secondary: #FF6F00;
+    --success: #2E7D32;
+    --danger: #C62828;
+    --background: #F5F5F5;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+    position: sticky;
+    top: 64px;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.main-content {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* POS Terminal */
+.pos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.pos-item-btn {
+    min-height: 80px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    transition: all 0.2s;
+}
+
+.pos-item-btn:hover, .pos-item-btn:focus {
+    background: #e3f2fd;
+    border-color: var(--primary);
+}
